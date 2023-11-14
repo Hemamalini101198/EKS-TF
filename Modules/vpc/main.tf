@@ -13,6 +13,6 @@ module "vpc" {
   single_nat_gateway = true
    
   tags = {
-    name   = "var.vpc.tag"   
+    name   = "eks-witmer-dev"   
   }
 }
