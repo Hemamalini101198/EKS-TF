@@ -3,10 +3,10 @@ variable "cluster_name" {
   type        = string
 }
 
-variable "subnets" {
-  description = "List of subnet IDs for the EKS cluster"
-  type        = list(string)
-}
+#variable "subnets" {
+# description = "List of subnet IDs for the EKS cluster"
+# type        = list(string)
+#}
 
 variable "disk_size" {
   description = "disk size of worker node"
