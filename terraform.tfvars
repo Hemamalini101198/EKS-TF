@@ -13,3 +13,4 @@ private_subnets = ["10.11.0.0/24", "10.12.0.0/24"]
 asg_name = "witmer-dev-asg"
 #domain_names = ""
 alb_name = "witmer-dev-alb"
+vpc_name = "witmer-dev-vpc"
