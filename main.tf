@@ -14,7 +14,7 @@ provider "aws" {
 module "eks_cluster" {
   source          = "./Modules/EKS-cluster"
   cluster_name    = "var.cluster_name"
-  subnets         = "var.private_subnets"
+  #subnets         = "var.private_subnets"
   #lable_name = general
   managed_node_desired_size = var.managed_node_desired_size
   managed_node_min_size     = var.managed_node_min_size
