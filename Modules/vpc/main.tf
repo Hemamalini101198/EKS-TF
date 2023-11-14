@@ -10,6 +10,6 @@ module "vpc" {
   enable_nat_gateway = true
   single_nat_gateway = true
   tags = {
-    name   = "var.vpc.tag"   
+    name   = "var.vpc_name"   
   }
 }
