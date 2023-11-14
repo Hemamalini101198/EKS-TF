@@ -24,7 +24,7 @@ module "eks_cluster" {
       max_size     = "var.managed_node_max_size"
 
       labels = {
-        role = "var.lable_name"
+        role = "general"
       }
 
       instance_types = "var.node_instance_type"
