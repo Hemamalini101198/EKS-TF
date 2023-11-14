@@ -13,10 +13,10 @@ variable "disk_size" {
   default = 50
 }
 
-variable "lable_name" {
-  description = "lable name of worker node"
-  default = general
-}
+#variable "lable_name" {
+#  description = "lable name of worker node"
+#  default = general
+#}
 
 variable "managed_node_desired_size" {
   description = "Number of managed node desired size"
