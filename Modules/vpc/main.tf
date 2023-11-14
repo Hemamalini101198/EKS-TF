@@ -11,7 +11,4 @@ module "vpc" {
   # NAT Gateways - Outbound Communication
   enable_nat_gateway = true
   single_nat_gateway = true
-  tags = {
-    name   = "var.vpc_name"   
-  }
 }
