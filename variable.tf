@@ -47,11 +47,11 @@ variable "eks-node" {
   description = "Name for the EKS eks node group"
   type        = string
 }
-
+/*
 variable "sg_id" {
   type = string  
 }
-
+*/
 
 variable "desired_nodes" {
   description = "Number of managed node desired size"
