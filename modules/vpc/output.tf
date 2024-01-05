@@ -23,7 +23,8 @@ output "public2_subnet_id" {
   value = aws_subnet.public2_subnet.id
 }
 
-output "sg_id" {
-  description = "security group id"
-  value = aws_security_group.sg.id
-}
+# output "sg_id" {
+#   description = "security group id"
+#   value = aws_security_group.sg.id
+# }
+
