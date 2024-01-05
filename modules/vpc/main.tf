@@ -39,6 +39,11 @@ resource "aws_subnet" "public1_subnet" {
   tags = {
     Name = "${var.project_name_env}-publicsubnet1"
   }
+  lifecycle {
+    ignore_changes = [
+      tags,    
+  ]  
+  }
 }
 
 #creation of public subnet2
@@ -63,6 +68,11 @@ resource "aws_subnet" "private1_subnet" {
   tags = {
     Name = "${var.project_name_env}-privatesubnet1"
   }
+  lifecycle {
+    ignore_changes = [
+      tags,    
+  ]  
+  }
 }
 
 #creation of private subnet2
@@ -73,6 +83,11 @@ resource "aws_subnet" "private2_subnet" {
 
   tags = {
     Name = "${var.project_name_env}-privatesubnet2"
+  }
+  lifecycle {
+    ignore_changes = [
+      tags,    
+  ]  
   }
 }
 
@@ -133,25 +148,25 @@ resource "aws_route_table_association" "private_association2" {
   route_table_id = aws_route_table.private.id
 }
 
-resource "aws_security_group" "sg" {
-  description = "Allow inbound traffic"
-  vpc_id = aws_vpc.vpc.id
+# resource "aws_security_group" "sg" {
+#   description = "Allow inbound traffic"
+#   vpc_id = aws_vpc.vpc.id
 
-  ingress {
-    from_port   = 0
-    to_port     = 65535
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  } 
+#   ingress {
+#     from_port   = 0
+#     to_port     = 65535
+#     protocol    = "tcp"
+#     cidr_blocks = ["0.0.0.0/0"]
+#   } 
 
-  egress {
-    from_port   = 0
-    to_port     = 0
-    protocol    = "-1"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-tags = {
-    name = "${var.project_name_env}-sg"
-  }
+#   egress {
+#     from_port   = 0
+#     to_port     = 0
+#     protocol    = "-1"
+#     cidr_blocks = ["0.0.0.0/0"]
+#   }
+# tags = {
+#     name = "${var.project_name_env}-sg"
+#   }
 
-}
+# }
